@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment: 
+      - Port=3000
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=ben
+      - MONGO_INITDB_ROOT_PASSWORD=trdiayw13
